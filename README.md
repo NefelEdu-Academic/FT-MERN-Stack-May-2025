@@ -13,4 +13,4 @@
 
 <br />
 
-<img src="https://img-c.udemycdn.com/course/750x422/3269178_d30e.jpg" alt="Mern logo" width="350">
+<img src="https://img-c.udemycdn.com/course/750x422/3269178_d30e.jpg" alt="Mern logo" width="400">
