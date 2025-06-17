@@ -1,0 +1,23 @@
+<h1> {{appTitle}} </h1>
+<app-my-component (notifyParent)="onNotify($event)" [parentMessage] = "appTitle"></app-my-component>
+<table class="table">
+  <thead>
+      <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th># pages</th>
+          <th>Author</th>
+          <th>Image</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let oneBook of allBooks">
+          <td>{{oneBook._id}}</td>
+          <td>{{oneBook.title}}</td>
+          <td>{{oneBook.nbOfPages}}</td>
+          <td>{{oneBook.author}}</td>
+          <td *ngIf="oneBook.image">{{oneBook.image}}</td>
+          <td *ngIf="!oneBook.image">None</td>
+      </tr>
+  </tbody>
+</table>
