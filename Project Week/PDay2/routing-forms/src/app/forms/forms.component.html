@@ -1,0 +1,8 @@
+<h1>User Form</h1>
+<form (ngSubmit)="handleSubmit()">
+    <label for="">Username</label>
+    <input name="name" [(ngModel)]="newUser.name" type="text">
+    <label for="">Email</label>
+    <input name="email" [(ngModel)]="newUser.email" type="email">
+    <button>Create</button>
+</form>
