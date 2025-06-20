@@ -1,0 +1,26 @@
+<h1>All Tasks</h1>
+
+<table *ngIf="allTasks.length" class="table">
+
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Priority</th>
+            <th>Due Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let task of allTasks">
+            <td> {{task.title}} </td>
+            <td> {{task.priority}} </td>
+            <td> {{task.dueDate.toString().split("T")[0]}} </td>
+            <td> <button (click)="deleteTask(task._id)" class="btn btn-danger">Delete</button> </td>
+        </tr>
+    </tbody>
+</table>
+
+<div *ngIf="!allTasks.length">
+    <h3>No tasks available</h3>
+
+</div>
