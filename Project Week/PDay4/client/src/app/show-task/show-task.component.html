@@ -1,0 +1,39 @@
+<div *ngIf="task">
+    <div class="card-header bg-primary text-white">
+        <h5 class="mb-0" id="taskTitle"> {{task.title}} </h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text" id="taskContent"> {{task.content}} </p>
+        <div class="row">
+          <div class="col-md-6">
+            <strong>Priority:</strong>
+            <span
+              id="taskPriority"
+              class="badge ms-2"
+              *ngIf="task.priority == 'High'" style="background-color: red;"
+              > {{task.priority}} </span
+            >
+            <span
+              id="taskPriority"
+              class="badge ms-2"
+              *ngIf="task.priority == 'Medium'" style="background-color: yellow;"
+              > {{task.priority}} </span
+            >
+            <span
+              id="taskPriority"
+              class="badge ms-2"
+              *ngIf="task.priority == 'Low'" style="background-color: green;"
+              > {{task.priority}} </span
+            >
+          </div>
+          <div class="col-md-6">
+            <strong>Due Date:</strong>
+            <span id="taskDueDate"> {{task.dueDate.split("T")[0]}} </span>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div *ngIf="!task">
+    <p>No task available</p>
+</div>
